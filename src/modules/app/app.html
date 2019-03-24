@@ -1,0 +1,11 @@
+<div class="p-app">
+    <div class="header">
+        <navigate :nav-List="navList" @go-state="goWhere"></navigate>
+    </div>
+    <div class="content">
+        <vertical :menu-List="dataList" :init-Index="0"  @fold-body="foldHandle" @go-state="goState"></vertical>
+        <div :class="['multi-body',{'fold-min':isMin}]">
+            <router-view></router-view>
+        </div>
+    </div>
+</div>

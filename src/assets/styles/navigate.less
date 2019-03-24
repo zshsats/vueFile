@@ -1,0 +1,38 @@
+.c-navigate{
+  position: absolute;
+  left: 15px;
+  display: block;
+  font-size: 14px;
+  z-index: 900;
+  height: 60px;
+  line-height: 60px;
+  color: #515a6e;
+  .nav-item{
+    float: left;
+    position: relative;
+    height: inherit;
+    border-bottom: 2px solid transparent;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    box-sizing: border-box;
+  }
+  .nav-item .item-name{
+    margin: 0 5px;
+  }
+  .nav-active{
+    color: #ff9900;
+    border-bottom: 2px solid  #ff9900;
+  }
+  &:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #dcdee2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+}

@@ -1,0 +1,140 @@
+.c-vertical{
+  font-size: 16px;
+  width: 200px;
+  position: relative;
+  height: 100%;
+  transition: all 0.3s;
+  &:after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100%;
+    background: #dcdee2;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+  }
+  >ul{
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+  }
+  .menu-item >ul{
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+  }
+  .menu-item{
+    position: relative;
+  }
+  .menu-item a{
+    position: relative;
+    display: block;
+    height: 45px;
+    overflow: hidden;
+    line-height: 45px;
+    padding-left: 15px;
+    width:auto;
+    color: #515a6e;
+    transition: all .3s;
+  }
+  .menu-item >a i:first-child{
+    position: absolute;
+  }
+  .menu-item >a i:last-child{
+    float: right;
+    margin-right: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  .menu-item a >span{
+    margin-left: 30px;
+  }
+  .parent-active > a{
+    color: #ff9900;
+    background-color: #f0faff;
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 2px;
+      height: 45px;
+      background: #34a0ce;
+      opacity: 1;
+      transition: all .3s;
+    }
+  }
+  .child-active a{
+    color: #ff9900;
+    background: #f3f3f3;
+  }
+  .child-item a >span{
+    margin-left: 30px;
+  }
+
+  .menu-item >a .rotate-icon{
+    transform: rotate(90deg);
+  }
+
+  .fold-bottom{
+    position: absolute;
+    bottom: 0;
+    line-height: 40px;
+    height: 40px;
+    background: #f0faff;
+    width: 100%;
+    transition: width 0.3s ease-in-out;
+    span{
+      position: relative;
+      width: 100%;
+      height: 40px;
+      display: block;
+    }
+    i{
+      position: absolute;
+      transform: rotate(0deg);
+      width: 100%;
+      text-align: center;
+      height: 40px;
+      transition: all 0.3s ease-in-out;
+    }
+    .fold-icon{
+
+      transform: rotate(-180deg);
+    }
+
+  }
+  .transform-min{
+    width: 60px;
+  }
+}
+
+.vertical-min.c-vertical{
+  width: 60px;
+  .menu-item > a > span,.menu-item > a > i:last-child{
+    display: none;
+  }
+
+  .menu-item > ul {
+    display: none;
+  }
+  .menu-item:hover > ul {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 60px;
+    width: 180px;
+    height: auto!important;
+    z-index: 200;
+    background: #f8f8f9;
+    overflow: hidden;
+  }
+
+}
+
+.fold-min{
+  left: 60px;
+
+}
